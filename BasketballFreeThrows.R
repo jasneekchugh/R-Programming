@@ -59,5 +59,5 @@ myplot(FreeThrowsAttempts/ Games)
 #2 Free throw Accuracy
 myplot(FreeThrows/FreeThrowsAttempts)
 
-#3 Player playing style excluding Free Throws
+#3 Player playing style excluding the Free Throws
 myplot((Points - FreeThrows)/FieldGoals)
