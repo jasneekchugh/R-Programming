@@ -1,4 +1,4 @@
-install.packages("ISwR")
+install.packages("ISwR" )
 yes
 library("ISwR")
 
