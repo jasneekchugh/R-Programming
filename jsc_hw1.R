@@ -1,6 +1,6 @@
 #CS636- Data Analytics with R
 #Homework- 1
-#Jasneek Singh Chugh (jc2433)
+#Jasneek Singh Chugh (jc2433 )
 -------------------------------------------------------------------------------
 #1.20
 
