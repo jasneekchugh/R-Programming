@@ -1,0 +1,71 @@
+#1
+
+setwd("/Users/jasneekchugh/Desktop/Data\ Science\ NJIT/CS636-\ DA\ with\ R/Week4/")
+
+x<-read.csv("train.csv")
+x
+head(x)
+nrow(x)
+str(x)
+
+#2
+distinct_relevance<-function(vec= x$relevance) {
+  un<-c()
+  for (i in 1:length(vec)) {
+    if (vec[i] %in% un) {
+      next
+    } else {
+      un<-append(un,vec[i])
+    }
+  }
+return(length(un))
+
+}
+
+len<- distinct_relevance(x$relevance)
+print(len)
+
+#3
+count=function(vect,value){
+  counter=0
+  for(i in 1: length(vect)){
+    if(vect[i]==value){
+      counter=counter+1
+    }
+  }
+  counter
+}
+count(x$relevance, 15)
+
+#4
+table(x$relevance)
+
+#5
+k = 0
+sum = 0
+flr <- function(f) {t = f - f %% 0.01; t}
+repeat{
+  x1 = 4 * ((-1)^k)/(2*k + 1)
+  sum = sum + x1
+  cat("current values ",k, sum, "\n")
+  if(flr(sum) == 3.14){
+    break
+  }else{
+    k = k + 1
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
