@@ -2,7 +2,7 @@
 
 setwd("/Users/jasneekchugh/Desktop/Data\ Science\ NJIT/CS636-\ DA\ with\ R/Week4/")
 
-x<-read.csv("train.csv")
+x<-read.csv("train.csv" )
 x
 head(x)
 nrow(x)
