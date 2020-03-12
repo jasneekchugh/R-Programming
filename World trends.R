@@ -5,6 +5,7 @@ Life_Expectancy_At_Birth_2013 <- c(75.3286585365854,60.0282682926829,51.86617073
 
 #-------------------
 
+
 getwd()
 setwd("/Users/JANEEKCHUGH/Desktop/R programming")
 
