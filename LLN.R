@@ -6,6 +6,7 @@ for(i in rnorm(N))
   {
     counter <- counter + 1
   }
+  
 }
 counter/N
 #compare to: 68.2% or 0.682
