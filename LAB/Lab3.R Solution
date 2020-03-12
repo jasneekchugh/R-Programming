@@ -7,7 +7,6 @@ head(x)
 nrow(x)
 str(x)
 
-
 #2
 distinct_relevance<-function(vec= x$relevance) {
   un<-c()
