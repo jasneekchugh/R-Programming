@@ -1,4 +1,5 @@
 N <-1000000
+
 counter <- 0
 for(i in rnorm(N))
 {
