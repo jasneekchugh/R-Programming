@@ -52,6 +52,7 @@ mean(loans_test$pred == loans_test$outcome)
 
 
 #preventing overgrown trees
+
 # Grow a tree with maxdepth of 6
 loan_model <- rpart(outcome ~ ., data = loans_train, method = "class", control = rpart.control(cp = 0, maxdepth = 6))
 
@@ -60,5 +61,28 @@ loans_test$pred <- predict(loan_model, loans_test, type = "class")
 
 # Compute the accuracy of the simpler tree
 mean(loans_test$pred == loans_test$outcome)
+
+
+# Grow an overly complex tree
+loan_model <- rpart(outcome ~ ., data = loans_train, method = "class", control = rpart.control(cp = 0))
+# Examine the complexity plot
+plotcp(loan_model)
+
+# Prune the tree
+loan_model_pruned <- prune(loan_model, cp = 0.0014)
+
+# Compute the accuracy of the pruned tree
+loans_test$pred <- predict(loan_model_pruned, loans_test,type="class")
+mean(loans_test$pred==loans_test$outcome)
+
+# Load the randomForest package
+library(randomForest)
+
+# Build a random forest model
+loan_model <- randomForest(outcome~., data = loans_train)
+
+# Compute the accuracy of the random forest
+loans_test$pred <- predict(loan_model, loans_test)
+mean(loans_test$pred== loans_test$outcome)
 
 
