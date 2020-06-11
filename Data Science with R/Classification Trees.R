@@ -4,6 +4,8 @@
 # Load the rpart package
 library(rpart)
 
+
+
 head(loans)
 str(loans)
 # Build a lending model predicting loan outcome versus loan amount and credit score
